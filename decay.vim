@@ -1,4 +1,4 @@
-" Vim colorscheme: decayce-strict (based on user-provided palette)
+" Vim fork of Decaycs's Decay colorscheme)
 set background=dark
 hi clear
 
@@ -8,7 +8,7 @@ endif
 
 let g:colors_name = "decayce"
 
-" Exact color definitions
+" Color definitions
 let s:bg      = "#171B20"
 let s:fg      = "#b6beca"
 let s:cursor  = "#2b3038"
@@ -67,7 +67,7 @@ execute "highlight DiffChange   guibg=" . s:blue
 execute "highlight DiffText     guibg=" . s:magenta
 
 
-" Colors for C++
+" Colors for Cpp (With vim-cpp-modern installed)
 
 augroup CppFileHighlight
   autocmd!
@@ -83,7 +83,6 @@ highlight cppSTLret ctermfg=Blue guifg=#c68aee
 highlight cppSTLnumbs ctermfg=Blue guifg=#e9a180
 
 highlight cppSTLpunct ctermfg=Blue guifg=#c68aee
-" highlight cppSTLtype ctermfg=Blue guifg=#86aaec
 syntax match cppInt /\<\h\w*\>\ze\*\h\w*/
 highlight cppInt ctermfg=Blue guifg=#86aaec
 
@@ -93,7 +92,6 @@ hi! cppPointerMemberAccess guifg=#c68aee
 
 syntax match cppBraces /[{}]/
 syntax match cppBraces2 /[()]/
-" syntax match cppBraces3 /[\[\]/
 highlight cppBraces guifg=#c68aee
 highlight cppBraces2 guifg=#c68aee
 
