@@ -4,6 +4,11 @@
 
 ## Preview
 
+![Alt text](./assets/preview.gif)
+### Custom syntax highlighting colors for C++ and certain languages.
+### Custom CoC.vim colors.
+### Custom ALE.vim virtual text color.
+
 ![Alt text](./assets/image1.png)
 ![Alt text](./assets/image2.png)
 
@@ -38,6 +43,8 @@
     ```
     colorscheme decay
     ```
+
+
 
 
 
