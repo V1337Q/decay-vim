@@ -23,6 +23,17 @@
     ```
     cp -r decay.vim ~/.vim/colors/
     ```
+## Airline-theme Installation
+### move the airline theme to your local vim-airline theme directory.
+    ```
+    cp -r airline-decayvim.vim ~/.vim/plugged/vim-airline-themes/autoload/airline/themes 
+    " or other locations. 
+    ```
+### Set your vim-airline theme to airline-decayvim
+    ```
+    let g:airline_theme = 'airline-decayvim'
+    ```
+
 ### Set colorscheme on your .vimrc
     ```
     colorscheme decay
