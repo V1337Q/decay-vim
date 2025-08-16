@@ -1,4 +1,4 @@
-" Vim fork of Decaycs's Decay colorscheme)
+" Vim version of the theme Decay by decaycs
 set background=dark
 hi clear
 
@@ -8,7 +8,7 @@ endif
 
 let g:colors_name = "decayce"
 
-" Color definitions
+" Exact color definitions
 let s:bg      = "#171B20"
 let s:fg      = "#b6beca"
 let s:cursor  = "#2b3038"
@@ -50,8 +50,9 @@ execute "highlight PmenuSel     guifg=" . s:bg . " guibg=" . s:blue
 execute "highlight Visual       guibg=" . s:selection_bg
 " execute "highlight CursorLine   guibg=" . s:dim_fg " guifg=" . s:fg
 " execute "highlight ColorColumn  guibg=" . s:dim_fg " guifg=" . s:fg
-execute "highlight CursorLine   guibg=" . s:cursor " guifg=" . s:fg
-execute "highlight ColorColumn  guibg=" . s:cursor " guifg=" . s:fg
+execute "highlight CursorLine   guibg=" . s:bg 
+" execute "highlight ColorColumn  guibg=" . s:cursor " guifg=" . s:fg
+execute "highlight ColorColumn  guibg=" . s:cursor
 execute "highlight MatchParen   guifg=#ffffff guibg=" . s:blue
 
 " Diagnostics and UI feedback
@@ -66,8 +67,30 @@ execute "highlight DiffDelete   guibg=" . s:red
 execute "highlight DiffChange   guibg=" . s:blue
 execute "highlight DiffText     guibg=" . s:magenta
 
+" Handles fillchars 
+highlight VertSplit guibg=#171B20 guifg=#171B20
+highlight StatusLineNC guibg=#171B20 guifg=#171B20
+highlight CursorLine cterm=NONE ctermbg=NONE guibg=NONE
+hi! NonText ctermbg=NONE guibg=NONE
+highlight CursorLineNr cterm=NONE gui=NONE
 
-" Colors for Cpp (With vim-cpp-modern installed)
+" Colors for ALE.vim
+hi ALEVirtualTextWarning guifg=#c0c5fb guibg=#171B20
+hi ALEVirtualTextError guifg=#fbc3c0 guibg=#171B20
+
+" Colors for CoC.vim
+highlight CocMenuSel guibg=#78DBA9 guifg=#171B20
+" highlight Pmenu guibg=#282c34 guifg=#abb2bf
+" highlight PmenuSel guibg=#3e4451 guifg=#ffffff
+highlight PmenuSel guibg=#101419 guifg=#dee1ea
+highlight CocSearch guifg=#98c379
+highlight CocPumMenu guibg=#101419
+highlight CocPumVirtualText guifg=#5c6370
+highlight CocFloating guibg=#1e222a
+"highlight CocFloating guibg=#101419
+
+
+" Colors for C++
 
 augroup CppFileHighlight
   autocmd!
@@ -83,6 +106,7 @@ highlight cppSTLret ctermfg=Blue guifg=#c68aee
 highlight cppSTLnumbs ctermfg=Blue guifg=#e9a180
 
 highlight cppSTLpunct ctermfg=Blue guifg=#c68aee
+" highlight cppSTLtype ctermfg=Blue guifg=#86aaec
 syntax match cppInt /\<\h\w*\>\ze\*\h\w*/
 highlight cppInt ctermfg=Blue guifg=#86aaec
 
@@ -92,6 +116,7 @@ hi! cppPointerMemberAccess guifg=#c68aee
 
 syntax match cppBraces /[{}]/
 syntax match cppBraces2 /[()]/
+" syntax match cppBraces3 /[\[\]/
 highlight cppBraces guifg=#c68aee
 highlight cppBraces2 guifg=#c68aee
 
