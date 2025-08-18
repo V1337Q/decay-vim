@@ -20,9 +20,9 @@
 # Installation
 
 ### Clone the repo
-    ```bash
-    git clone https://github.com/V1337Q/decay-vim.git
-    ```
+```bash
+git clone https://github.com/V1337Q/decay-vim.git
+```
 
 ### cd to the cloned repo
     ```
