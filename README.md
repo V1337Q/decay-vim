@@ -20,34 +20,34 @@
 # Installation
 
 ### Clone the repo
-```bash
+```sh
 git clone https://github.com/V1337Q/decay-vim.git
 ```
 
 ### cd to the cloned repo
-    ```
-    cd decay-vim
-    ```
+```sh
+cd decay-vim
+```
 
 ### Move the theme (.vim) file into ~/.vim/colors/ (If not exist, make one)
-    ```
-    cp -r decay.vim ~/.vim/colors/
-    ```
+```sh
+cp -r decay.vim ~/.vim/colors/
+```
 ## Airline-theme Installation
 ### move the airline theme to your local vim-airline theme directory.
-    ```
-    cp -r airline-decayvim.vim ~/.vim/plugged/vim-airline-themes/autoload/airline/themes 
-    " or other locations. 
-    ```
+```sh
+cp -r airline-decayvim.vim ~/.vim/plugged/vim-airline-themes/autoload/airline/themes 
+" or other locations. 
+```
 ### Set your vim-airline theme to airline-decayvim
-    ```
-    let g:airline_theme = 'airline-decayvim'
-    ```
+```vim
+let g:airline_theme = 'airline-decayvim'
+```
 
 ### Set colorscheme on your .vimrc
-    ```
-    colorscheme decay
-    ```
+```vim
+colorscheme decay
+```
 
 
 
