@@ -19,6 +19,20 @@
 
 # Installation
 
+## Vim-Plug
+```sh
+Plug 'V1337Q/decay-vim', { 
+    \ 'do': 'ln -sf $HOME/.vim/plugged/decay-vim/autoload/airline/themes/decayvim.vim $HOME/.vim/plugged/vim-airline-themes/autoload/airline/themes/decayvim.vim' 
+    \ }
+```
+### Then 
+
+```vim
+:PlugInstall
+```
+
+# Manual Installation
+
 ### Clone the repo
 ```sh
 git clone https://github.com/V1337Q/decay-vim.git
@@ -41,7 +55,7 @@ cp -r airline-decayvim.vim ~/.vim/plugged/vim-airline-themes/autoload/airline/th
 ```
 ### Set your vim-airline theme to airline-decayvim
 ```vim
-let g:airline_theme = 'airline-decayvim'
+let g:airline_theme = 'decayvim'
 ```
 
 ### Set colorscheme on your .vimrc
