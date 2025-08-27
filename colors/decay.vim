@@ -169,6 +169,37 @@ else
     execute join(hl_string, ' ')
   endfunction
 endif
+
+" Airline Theme Integration: {{{
+function! s:SetupAirline()
+  " Set airline theme to our decay theme
+  let g:airline_theme = 'decay'
+  
+  " Force airline to reload if it's already loaded
+  if exists('g:loaded_airline')
+    silent! call airline#load_theme()
+  endif
+endfunction
+
+" Auto-setup airline when colorscheme loads
+call s:SetupAirline()
+
+" Command to change style and refresh everything
+command! -nargs=1 DecayStyle call s:SetDecayStyle(<f-args>)
+
+function! s:SetDecayStyle(style)
+  let g:decay_style = a:style
+  colorscheme decay
+  echo 'Decay theme set to:' a:style
+endfunction
+
+" Convenience commands
+command! DecayBase46 call s:SetDecayStyle('base46')
+command! DecayDark call s:SetDecayStyle('dark') 
+command! DecayDecayce call s:SetDecayStyle('decayce')
+command! DecayLight call s:SetDecayStyle('light')
+" }}}
+
 " }}}
 
 " Common Highlight Groups: {{{
