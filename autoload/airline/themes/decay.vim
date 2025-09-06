@@ -40,13 +40,13 @@ function! airline#themes#decay#refresh()
   endif
 
   " Normal mode
-  let s:N1 = [ s:bg, s:blue, 0, 4 ]
+  let s:N1 = [ s:bg, s:green, 0, 4 ]
   let s:N2 = [ s:fg, s:dim, 7, 8 ]
   let s:N3 = [ s:fg, s:bg, 7, 0 ]
   let g:airline#themes#decay#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
   " Insert mode
-  let s:I1 = [ s:bg, s:green, 0, 2 ]
+  let s:I1 = [ s:bg, s:blue, 0, 2 ]
   let s:I2 = [ s:fg, s:dim, 7, 8 ]
   let s:I3 = [ s:fg, s:bg, 7, 0 ]
   let g:airline#themes#decay#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
