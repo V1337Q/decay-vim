@@ -1,7 +1,22 @@
 <h1 align="center">🤖Decay-Vim</h1>
 <div align="center">
-	<a href="https://github.com/decaycs/">Decaycs</a>
+	<a href="https://github.com/V1337Q/">Decaycs</a>
 </div> 
+
+<p align="center">
+  <a href="https://github.com/V1337Q/decay-vim/stargazers">
+    <img
+      alt="Stargazers"
+      src="https://img.shields.io/github/stars/V1337Q/decay-vim?style=for-the-badge&logo=starship&color=78dba9&logoColor=b6beca&labelColor=1a1e24"
+    >
+  </a>
+  <a href="https://github.com/V1337Q/decay-vim/issues">
+    <img
+      alt="Issues"
+      src="https://img.shields.io/github/issues/V1337Q/decay-vim?style=for-the-badge&logo=gitbook&color=70a5eb&logoColor=b6beca&labelColor=1a1e24"
+    >
+  </a>
+</p>
 
 ## Vim version of the theme Decay (base46)
 
