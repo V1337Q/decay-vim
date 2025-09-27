@@ -24,6 +24,25 @@
 
 ## Preview
 
+ <h1 align="center">
+	Decay.vim
+  </h1>
+
+<p align="center">
+  <a href="https://github.com/decaycs/decay.vim/stargazers">
+    <img
+      alt="Stargazers"
+      src="https://img.shields.io/github/stars/decaycs/decay.vim?style=for-the-badge&logo=starship&color=78dba9&logoColor=b6beca&labelColor=1a1e24"
+    >
+  </a>
+  <a href="https://github.com/decaycs/decay.vim/issues">
+    <img
+      alt="Issues"
+      src="https://img.shields.io/github/issues/decaycs/decay.vim?style=for-the-badge&logo=gitbook&color=70a5eb&logoColor=b6beca&labelColor=1a1e24"
+    >
+  </a>
+</p>
+
 ![Alt text](./assets/preview.gif)
 ### Custom syntax highlighting colors for C++ and certain languages.
 ### Custom CoC.vim colors.
