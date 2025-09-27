@@ -853,5 +853,48 @@ call s:HL('CursorLine', s:palette.none, s:palette.none)
 hi! NonText ctermbg=NONE guibg=NONE
 call s:HL('CursorLineNr', s:palette.yellow, s:palette.none)
 " }}}
+"
+function! s:InstallAirlineTheme()
+  let l:source_path = expand('<sfile>:p:h') . '/autoload/airline/themes/decay.vim'
+  let l:target_dir = expand('~/.vim/plugged/vim-airline-themes/autoload/airline/themes/')
+  let l:target_path = l:target_dir . 'decay.vim'
+  
+  if !filereadable(l:source_path)
+    echo 'Decay airline theme not found at: ' . l:source_path
+    return 0
+  endif
+  
+  if !isdirectory(l:target_dir)
+    echo 'vim-airline-themes not found. Please install it first.'
+    return 0
+  endif
+  
+  " Copy the theme file
+  if writefile(readfile(l:source_path), l:target_path) == 0
+    echo 'Decay airline theme installed successfully!'
+    echo 'Restart Vim or run :AirlineTheme decay to use it.'
+    return 1
+  else
+    echo 'Failed to install Decay airline theme.'
+    return 0
+  endif
+endfunction
+
+command! DecayInstallAirline call s:InstallAirlineTheme()
+
+" Auto-set airline theme if available
+function! s:SetupAirline()
+  if exists('g:loaded_airline')
+    if !empty(glob(expand('~/.vim/plugged/vim-airline-themes/autoload/airline/themes/decay.vim')))
+      let g:airline_theme = 'decay'
+      silent! call airline#load_theme()
+    else
+      echo 'Decay airline theme not installed. Run :DecayInstallAirline to install it.'
+    endif
+  endif
+endfunction
+
+call s:SetupAirline()
+" }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker fmr={{{,}}}:
